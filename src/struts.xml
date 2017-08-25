@@ -5,11 +5,11 @@
 
 <struts>
 	<package name="registration" extends="struts-default">
-		<action name="u" class="u">
-			<result name="success">/registerSuccess.jsp</result>
-			<result name="fail">/registerFail.jsp</result>
-			<result name="list">/userlist.jsp</result>
-			<result name="load">/user.jsp</result>
+		<action name="user" class="user">
+			<result name="success">/register_success.jsp</result>
+			<result name="fail">/register_fail.jsp</result>
+			<result name="list">/user_list.jsp</result>
+			<result name="load">/user_single.jsp</result>
 		</action>
 	</package>
 </struts>

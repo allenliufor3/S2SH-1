@@ -6,7 +6,7 @@ import com.ming.s2sh.registration.model.User;
 
 public interface UserDao {
 
-	public void save(User u);
+	public void save(User user);
 
 	public boolean checkUserExistsWithName(String username);
 

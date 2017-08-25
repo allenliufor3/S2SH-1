@@ -10,7 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
 <base href="<%=basePath%>">
 
-<title>My JSP 'userlist.jsp' starting page</title>
+<title>查询用户</title>
 
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
@@ -24,7 +24,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </head>
 
 <body>
+	<form method="post" action="user!load">
+    	请输入用户id：<input type="text" name="id"><br>
+    	<input type="submit" value="提交"/>
+    </form><br>
+    
 	<s:property value="user.username" />
 	<s:debug></s:debug>
+	<br>
+	<a href="index.jsp">返回首页</a>
 </body>
 </html>

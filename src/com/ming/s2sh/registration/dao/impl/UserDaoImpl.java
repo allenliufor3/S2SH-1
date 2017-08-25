@@ -15,8 +15,8 @@ public class UserDaoImpl implements UserDao {
 
 	private HibernateTemplate hibernateTemplate;
 
-	public void save(User u) {
-		hibernateTemplate.save(u);
+	public void save(User user) {
+		hibernateTemplate.save(user);
 
 	}
 

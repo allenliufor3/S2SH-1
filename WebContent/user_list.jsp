@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@taglib prefix="s" uri="/struts-tags" %>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -9,7 +10,8 @@
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'index.jsp' starting page</title>
+    <title>查询所有用户</title>
+    
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -18,9 +20,24 @@
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
+
   </head>
   
   <body>
-    Register failed! <br>
+  	<form method="post" action="user!list">
+    	<input type="submit" value="查询所有用户"/>
+    </form>
+    
+    <br>
+    
+    <s:iterator value="users">
+    	<s:label>用户名：</s:label>
+    	<s:property value="username"/>
+    	<br/>
+    </s:iterator>
+    <s:debug></s:debug>
+    <br>
+	<a href="index.jsp">返回首页</a>
   </body>
+  
 </html>

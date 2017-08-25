@@ -4,9 +4,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-//贫血模型 充血模型
 @Entity
 public class User {
+
 	private int id;
 	private String username;
 	private String password;
